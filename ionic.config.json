@@ -1,0 +1,7 @@
+{
+  "name": "aflac-claims",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
