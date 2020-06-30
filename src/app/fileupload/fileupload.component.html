@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-button fill="outline" slot="start" (click)="updatestatus()">
+        <ion-icon color="primary" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-title>
+        Claim Status
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <span *ngIf="getKeys(uploadeddocument)">
+    <ion-card *ngFor="let key of keys">
+      <ion-item>
+        <ion-label>{{uploadeddocument[key].heading}}</ion-label>
+        <ion-item slot="end">
+          <ion-button fill="outline" slot="end" (click)="fileInput.click()">
+            <ion-icon color="primary" name="Add"></ion-icon>
+            <ion-label color="primary" stacked><b>Add Files</b></ion-label>
+            <input #fileInput type="file" accept="png, .pdf,image/*" (change)="addFile($event,key)"
+              style="display:none;" />
+          </ion-button>
+        </ion-item>
+      </ion-item>
+      <ion-card-content>
+        <ion-item *ngIf="uploadeddocument[key].value.length == 0">
+          Additional Info Required
+        </ion-item>
+        <ion-item *ngFor="let item of uploadeddocument[key].value">
+          <ion-label>{{item}}</ion-label>
+          <ion-button fill="outline" slot="end" (click)="removefile(item,key)">
+            <ion-icon color="danger" name="close"></ion-icon> Remove
+          </ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </span>
+</ion-content>

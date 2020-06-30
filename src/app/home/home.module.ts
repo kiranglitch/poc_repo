@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { ClaimsComponent } from '../../app/claims/claims.component'
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { FileuploadComponent } from '../fileupload/fileupload.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,
+    ClaimsComponent,
+  FileuploadComponent]
 })
-export class HomePageModule {}
+export class HomePageModule { }

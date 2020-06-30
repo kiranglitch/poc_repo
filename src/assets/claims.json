@@ -1,0 +1,32 @@
+{
+    "heading":
+    {
+        "patientname":"Patient name",
+        "claimnumber":"Claim number",
+        "datesubmitted":"Date submitted",
+        "documentstatus":"Document status"
+    },
+    "claims":[
+        {
+            "patientname":"john Smith",
+            "claimnumber":"121212",
+            "datesubmitted":"11/23/2009",
+            "documentstatus":"Completed",
+            "id":1
+        },
+        {
+            "patientname":"Steve B",
+            "claimnumber":"121212",
+            "datesubmitted":"11/23/2009",
+            "documentstatus":"Additional info required",
+            "id":2
+        },
+        {
+            "patientname":"john Smith",
+            "claimnumber":"121212",
+            "datesubmitted":"11/23/2009",
+            "documentstatus":"Not Recieved",
+            "id":3
+        }
+    ]
+}

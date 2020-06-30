@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "uploadeddocument": {
+            "Certificates": {
+                "heading": "Certificates",
+                "value": [
+                    "certificate1.pdf",
+                    "certificate2.pdf"
+                ]
+            },
+            "MedicalReport": {
+                "heading": "Medical Report",
+                "value": [
+                    "medicalReprt.pdf"
+                ]
+            }
+        }
+    },
+    {
+        "id": 2,
+        "uploadeddocument": {
+            "Certificates": {
+                "heading": "Certificates",
+                "value": [
+                    "certificate1.pdf",
+                    "certificate2.pdf"
+                ]
+            },
+            "MedicalReport": {
+                "heading": "Medical Report",
+                "value": []
+            }
+        }
+    },
+    {
+        "id": 3,
+        "uploadeddocument": {
+            "Certificates": {
+                "heading": "Certificates",
+                "value": []
+            },
+            "MedicalReport": {
+                "heading": "Medical Report",
+                "value": []
+            }
+          
+        }
+    }
+]

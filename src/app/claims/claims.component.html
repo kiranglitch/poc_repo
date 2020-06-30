@@ -1,0 +1,75 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Claim Status
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- <ion-card button=true *ngFor="let item of claims">
+    <ion-card-content>
+      <ion-item>
+        <span *ngIf="getKeys(item)">
+          <div *ngFor="let key of keys">
+            {{headings[key]}} : {{item[key]}}
+          </div>
+        </span>
+      </ion-item>
+  </ion-card-content>
+  </ion-card> -->
+  <ion-card button (click)="cardclick(item.id)" *ngFor="let item of claims">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="auto">
+            <div>
+              {{headings.patientname}} :
+            </div>
+          </ion-col>
+          <ion-col size="auto">
+            <div>
+              {{item.patientname}}
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="auto">
+            <div>
+              {{headings.claimnumber}} :
+            </div>
+          </ion-col>
+          <ion-col size="auto">
+            <div>
+              {{item.claimnumber}}
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="auto">
+            <div>
+              {{headings.datesubmitted}} :
+            </div>
+          </ion-col>
+          <ion-col size="auto">
+            <div>
+              {{item.datesubmitted}}
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="auto">
+            <div>
+              {{headings.documentstatus}} :
+            </div>
+          </ion-col>
+          <ion-col size="auto">
+            <div>
+              <ion-icon color={{this.uiservice.documents[item.id].color}}
+                name={{this.uiservice.documents[item.id].icon}}></ion-icon>{{this.uiservice.documents[item.id].status}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
