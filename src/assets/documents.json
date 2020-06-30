@@ -43,7 +43,12 @@
             "MedicalReport": {
                 "heading": "Medical Report",
                 "value": []
+            },
+            "fitnessreport": {
+                "heading": "Fitness Report",
+                "value": [ "certificate2.pdf"]
             }
+          
           
         }
     }

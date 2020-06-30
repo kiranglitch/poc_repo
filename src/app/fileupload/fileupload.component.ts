@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ClaimsService } from '../claims.service'
 import { Router } from '@angular/router';
 @Component({
@@ -25,12 +25,17 @@ export class FileuploadComponent implements OnInit {
     let file = $event.target.files[0];
     //console.log(file.name);
     this.uploadeddocument[category].value.push(file.name);
+    this.updatestatus();
   }
   removefile(filename, category): void {
     var index = this.uploadeddocument[category].value.indexOf(filename);
     if (index >= 0) {
       this.uploadeddocument[category].value.splice(index, 1);
     }
+    this.updatestatus();
+  }
+  ngDestroy(){
+    this.updatestatus();
   }
   updatestatus() {
     let full = true;
@@ -59,6 +64,8 @@ export class FileuploadComponent implements OnInit {
       }
     })
     this.uiservice.documents[this.uiservice._claim_id].uploadeddocument = this.uploadeddocument
+  }
+  onback(){
     this.uiservice._claim_id = "";
     this.router.navigate(['home/claims']);
   }
